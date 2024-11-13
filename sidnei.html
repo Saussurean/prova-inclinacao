@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EST</title>
+</head>
+<body>
+
+<h1>Experiência de estabilidade</h1>
+<h3>Comandante Sidnei</h5>
+
+<br />
+<a href="index.html">VOLTAR</a>
+<br />
+
+<div id="base" contenteditable>
+<ol>
+<li>O navio deverá estar flutuando em águas tranquilas, de preferência dentro do dique, com a amarração solecada por ocasião das medições</li>
+
+<li>Dispor de um peso móvel, que em navios médios e grandes se movimenta numa carreta sobre trilhos pra ambos os bordos, e que proporcione um ângulo de banda de cerca de um grau para cada bordo em navios grandes, de um e meio grau para navios médios e de dois graus a três graus para pequenas embarcações</li>
+
+<li>Mede-se por meio de pêndulosde grande comprimento amotecidos numa cuba com óleo e que se deslocam sobre uma régua graduada, o valor das distâncias percorridas pelos pêndulos a partir da linha central</li>
+
+<li>Determina-se o calado médio real, após as letiraus dos calados AV e AR com as devidas correções e com este calado médio, obtém-se o valor de KM (cota do metacentro), e do volume de carena no plano de curvas hidrostáticas do navio</li>
+
+<li>Obtém-se a densidade da água no local em que o navio encontra-se flutuando, e determina-se o deslocamento correto, multiplicando-se o valor do volume de carena pelo valor da densidade</li>
+
+<li>Com a fórmula p.d/Δ * CF/FL, obtém-se o valor de GM, por ocasião da experiência de estabilidade</li>
+
+<li>Somente deverão ficara bordo o pessoal indispensável à prova de Estabilidade</li>
+
+<li>Deverão ser computados todos os pesos em excesso a bordo, para as devidas correções necessárias</li>
+
+<li>Repete-se a experiência com diversos pesos (p) e distâncias (d)</li>
+
+<li>Com os valores de GM e KM, obtidos durante a prova de estabilidade, é determinado um valor definitivo de KG, o qual deverá constar nos planos operacionais, caderno de estabilidade e demais dados técnicos do navio, bem como o valor do Deslocamento leve</li>
+</ol>
+</div>
+
+<div id="teste" class="invisible test">
+</div>
+
+<br /><br />
+
+<div id="handle">
+<div id="dif">
+Dificuldade: <input id="range" type="range" id="level" min="1" max="10" value="1" oninput="this.nextElementSibling.value = this.value * 10 + '%'" />
+<output>10%</output></div>
+
+<button id="study" onclick="study()">Estudar</button> <button id="show" onclick="show()">Mostrar</button>
+</div>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css" />
+
+</body>
+</html>

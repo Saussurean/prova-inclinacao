@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EST</title>
+</head>
+<body>
+
+<h1>Experiência de estabilidade</h1>
+<h3>Comandante Steinberger</h5>
+
+<br />
+<a href="index.html">VOLTAR</a>
+<br />
+
+<div id="base" contenteditable>
+<ol>
+<li>O navio deverá estar flutuando em águas tanquilas, de preferência dentro do dique, sem qualquer amarração que o impeça de se inclinar livremente</li>
+
+<li>Dispor de um peso móvel, conhecido, de modo que possa deslocar-se livremente, de um bordo ao outro</li>
+
+<li>Mede-se por meio de um pêndulo de grande comprimento que se desloca sobre uma régua gradauda, o valor da distância percorrida pelo pêndulo a partir da linha central</li>
+
+<li>Determina-se o calado médio, após a leitura dos calados AV e AR. Com este calado médio, obtém-se o valor de KM (cota do metacntro), no plano de curvas hidrostáticas</li>
+
+<li>Obtém-se a densidade daa água no local em que se encontra flutuando o navio, com o valor de ∇ = Lpp . B . Hmed . α, determina-se o valor correto de (Δ = ∇ . ∂) em toneladas métricas</li>
+
+<li>Com a fórmula p.d/Δ * CF/FL, obtém-se o valor de GM, por ocasião da experiência de estabilidade</li>
+
+<li>Somente deverão ficar a bordo o pessoal indispensável à prova de Estabilidade</li>
+
+<li>Deverão ser computados todos os pesos em excesso a bordo, para as devidas correções necessárias</li>
+
+<li>Repete-se a experiência com diversos pesos (p) e distâncias (d)</li>
+
+<li>Com os valores de GM e KM, obtidos durante a prova de estabilidade, é determinado um valor definitivo de KG, o qual deverá constar nos planos operacionais, caderno de estabilidade e demais dados técnicos do navio.</li>
+
+</ol>
+</div>
+
+<div id="teste" class="invisible test">
+</div>
+
+<br /><br />
+
+<div id="handle">
+<div id="dif">
+Dificuldade: <input id="range" type="range" id="level" min="1" max="10" value="1" oninput="this.nextElementSibling.value = this.value * 10 + '%'" />
+<output>10%</output></div>
+
+<button id="study" onclick="study()">Estudar</button> <button id="show" onclick="show()">Mostrar</button>
+</div>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css" />
+
+</body>
+</html>

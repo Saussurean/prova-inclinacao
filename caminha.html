@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EST</title>
+</head>
+<body>
+
+<h1>Experiência de estabilidade</h1>
+<h3>Comandante Caminha</h5>
+
+<br />
+<a href="index.html">VOLTAR</a>
+<br />
+
+<div id="base" contenteditable>
+<ol>
+<li>O navio deve estar flutuando no dique sem nada que o impeça de adernar livremente. Os cabos de amarração devem estar brandos</li>
+
+<li>Todos os pesos estranhos ao deslocamento leve devem ser anotados, para posterior dedução no cálculo</li>
+
+<li>Os tanques devem estar ou completamente cheios (cheios sob pressão) ou totalmente vazios. No caso de haver algum tanque com superfície livre, ela deve ser cuidadosamente determinada para posterior desconto no cálculo</li>
+
+<li>Todas as válvulas de ligações entre tanques devem estar fechadas</li>
+
+<li>Todos pesos móveis devem estar peados; se for usado pau de carga ou guindaste de bordo nas movimentações de pesos na experiência, esses aparelhos deverão ser levados à suas posições normais após cada adernamento</li>
+
+<li>Não deve haver vento forte, e nenhum vento pelo través</li>
+
+<li>O calado é lido com a maior exatidão possível, tanto por bombordo como por boreste, a vante, a meio navio e a ré; o calado em cada marca é a média artimética do calado lido a boreste com o calado lido a bombordo; determinados os calados nas marcas, passa-se para os calados nas perpendiculares, e determina-se o calado correspondente</li>
+
+<li>A densidade da água do dique é medida em várias posições e profundidades em torno do navio</li>
+
+<li>Calcula-se, por meio das curvas hidrostáticas, o deslocamento do navio correspondente ao calado conforme determinado em (7) acima; esse deslocamento é corrigido para densidade real da água do dique, que é a média das medidas tomadas de acordo com (8) acima</li>
+
+<li>No momento da experiência, o número de pessoas a bordo deve ser o mínimo possível, estritamente o necessário para as observações e manuseio dos materiais e aparelhos, e deverão se localizar em posições pré-determinadas, parados, quando estiverem sendo feitas as leituras</li>
+
+</ol>
+</div>
+
+<div id="teste" class="invisible test">
+</div>
+
+<br /><br />
+
+<div id="handle">
+<div id="dif">
+Dificuldade: <input id="range" type="range" id="level" min="1" max="10" value="1" oninput="this.nextElementSibling.value = this.value * 10 + '%'" />
+<output>10%</output></div>
+
+<button id="study" onclick="study()">Estudar</button> <button id="show" onclick="show()">Mostrar</button>
+</div>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css" />
+
+</body>
+</html>

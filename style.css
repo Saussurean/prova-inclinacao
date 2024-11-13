@@ -1,0 +1,50 @@
+.invisible {
+	display: none;
+}
+
+.test {
+	color: #555;
+}
+
+li {
+	margin-block: 2em;
+}
+
+@media screen {
+	body {
+		font-size: 1.2em;
+	}
+
+	button {
+		padding: 1em;
+	}
+
+	#handle {
+		box-sizing: border-box;
+		padding: 1em;
+		position: sticky;
+		bottom: 1em;
+		background-color: teal;
+		display: grid;
+		grid-template-areas:
+		". dif ."
+		"show . study";
+	}
+
+	#dif {
+		max-width: 30vw;
+		color: white;
+		text-align: center;
+		font-weight: bolder;
+		grid-area: dif;
+	}
+
+	#show {
+		grid-area: show;
+	}
+
+	#study {
+		grid-area: study;
+		grid-column: 3;
+	}
+}
