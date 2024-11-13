@@ -47,5 +47,5 @@ function zap(text, percent=0.1) {
 			text = text.replace(word, new_word);
 		}
 
-		return words.join(' ');
+		return text;
 	}
