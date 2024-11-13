@@ -35,7 +35,7 @@ function zap(text, percent=0.1) {
 			let count = Math.ceil(word.length * percent);
 			
 			for (let i=0, trials=0; i<count; i++) {
-				let pos = Math.floor(Math.random() * (word.length-1));
+				let pos = Math.floor(Math.random() * (word.length));
 	
 				if (!regex.test(new_word[pos])) {
 					if (++trials > 100) break;
