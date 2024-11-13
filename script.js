@@ -27,19 +27,25 @@ function zap(text, percent=0.1) {
 
 		if (percent == 1) { return text.replaceAll(regex, '_') }
 
-	    	text = text.split('');
-		let count = Math.ceil(text.length * percent);
+		let words = text.split(' ');
 
-		for (let i=0, trials=0; i<count; i++) {
-			let pos = Math.floor(Math.random() * (text.length-1));
-
-			if (!regex.test(text[pos])) {
-				if (++trials > 100) break;
-				i--; continue;
+		for (let word of words) {
+			let new_word = word;
+			let count = Math.ceil(word.length * percent);
+			
+			for (let i=0, trials=0; i<count; i++) {
+				let pos = Math.floor(Math.random() * (text.length-1));
+	
+				if (!regex.test(new_word[pos])) {
+					if (++trials > 100) break;
+					i--; continue;
+				}
+	
+				new_word[pos] = '_';
 			}
 
-			text[pos] = '_';
+			text = text.replace(word, new_word);
 		}
 
-		return text.join('');
+		return words.join(' ');
 	}
