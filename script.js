@@ -45,3 +45,4 @@ function zap(text, percentage) {
     // Junta o array de caracteres de volta em uma string e retorna o resultado
     return textArray.join('');
 }
+// aaa
