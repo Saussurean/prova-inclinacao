@@ -27,8 +27,8 @@ function zap(text, percent=0.1) {
 
 		if (percent == 1) { return text.replaceAll(regex, '_') }
 
-	    text = text.split('');
-		let count = text.length * percent;
+	    	text = text.split('');
+		let count = Math.ceil(text.length * percent);
 
 		for (let i=0, trials=0; i<count; i++) {
 			let pos = Math.floor(Math.random() * (text.length-1));
