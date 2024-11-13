@@ -28,6 +28,7 @@ function zap(text, percent=0.1) {
 		if (percent == 1) { return text.replaceAll(regex, '_') }
 
 		let words = text.split(' ');
+		let new_words = [];
 
 		for (let word of words) {
 			let new_word = word;
@@ -44,8 +45,8 @@ function zap(text, percent=0.1) {
 				new_word[pos] = '_';
 			}
 
-			text = text.replace(word, new_word);
+			new_words.push(new_word);
 		}
 
-		return text;
+		return new_words.join(' ');
 	}
