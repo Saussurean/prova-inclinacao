@@ -22,31 +22,26 @@ function show() {
 	divTeste.classList.add("invisible");
 }
 
-function zap(text, percent=0.1) {
-		const regex = /[\wΔ∇∂αáéíóúÁÉÍÓÚâêîôûÂÊÎÔÛãõÃÕàèìòùÀÈÌÒÙÇç]/g;
+function zap(text, percentage) {
+    // Define a regex para as letras que serão substituídas
+    const regex = /[\wΔ∇∂αáéíóúÁÉÍÓÚâêîôûÂÊÎÔÛãõÃÕàèìòùÀÈÌÒÙÇç]/g;
+    
+    // Encontra todas as letras no texto que correspondem à regex
+    const matches = [...text.matchAll(regex)];
 
-		if (percent == 1) { return text.replaceAll(regex, '_') }
-
-		let words = text.split(' ');
-		let new_words = [];
-
-		for (let word of words) {
-			let new_word = word;
-			let count = Math.ceil(word.length * percent);
-			
-			for (let i=0, trials=0; i<count; i++) {
-				let pos = Math.floor(Math.random() * (word.length));
-	
-				if (!regex.test(new_word[pos])) {
-					if (++trials > 100) break;
-					i--; continue;
-				}
-	
-				new_word[pos] = '_';
-			}
-
-			new_words.push(new_word);
-		}
-
-		return new_words.join(' ');
-	}
+    // Calcula o número de letras a serem substituídas
+    const numToReplace = Math.ceil(percentage * matches.length);
+    
+    // Embaralha os índices das letras correspondentes para escolha aleatória
+    const indices = matches.map(match => match.index);
+    const selectedIndices = indices.sort(() => Math.random() - 0.5).slice(0, numToReplace);
+    
+    // Converte o texto em um array de caracteres para substituição
+    const textArray = [...text];
+    selectedIndices.forEach(index => {
+        textArray[index] = '_';
+    });
+    
+    // Junta o array de caracteres de volta em uma string e retorna o resultado
+    return textArray.join('');
+}
